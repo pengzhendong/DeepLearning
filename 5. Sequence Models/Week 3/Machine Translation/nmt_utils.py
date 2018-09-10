@@ -203,8 +203,8 @@ def plot_attention_map(model, input_vocabulary, inv_output_vocabulary, text, n_s
             attention_map[t][t_prime] = r[t][0,t_prime,0]
 
     # Normalize attention map
-#     row_max = attention_map.max(axis=1)
-#     attention_map = attention_map / row_max[:, None]
+    # row_max = attention_map.max(axis=1)
+    # attention_map = attention_map / row_max[:, None]
 
     prediction = model.predict([encoded, s0, c0])
     
